@@ -1,0 +1,7 @@
+Include this widget's git-activity-widget.php file on any web page to show a vertical scrolling ticker of a particular user's GitHub activity
+
+Requirements:
+* jQuery
+
+Bugs:
+* Doesn't load description/message on repo creation and first master pushes
