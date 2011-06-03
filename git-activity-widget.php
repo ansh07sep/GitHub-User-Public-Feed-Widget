@@ -20,6 +20,7 @@ include_once('lib/idn/idna_convert.class.php');
 $cacheDir = "./cache";
 $GIT_USERNAME = "YOUR_GIT_USERNAME";
 $MAX_FEED_ITEMS = 15;
+$MAX_DESC_LENGTH = 47; //Add +2 for middot and space when styling
 
 // Single feed
 $feed = new SimplePie();
@@ -59,7 +60,7 @@ foreach ($feed->get_items(0, $numItems) as $item) {
 		for ($i=0; $i<$size; $i++) {
 			$description = $items->item($i)->nodeValue;
 			if (sizeof($description) > 100) {
-				$description = substr($description, 0, 100) . "...";
+				$description = substr($description, 0, $MAX_DESC_LENGTH) . "...";
 			}
 			$descriptions .= "&middot;&nbsp;" . $description . "<br/>";
 		}
