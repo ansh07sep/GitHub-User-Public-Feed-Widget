@@ -83,10 +83,10 @@ foreach ($feed->get_items(0, $numItems) as $item) {
 		echo "<li><div class='info'><div><a href='" . $feedItem["url"] . "'>" . $feedItem["title"] . "</a></div>";
 		echo "<div><span>" . $feedItem["description"] . "</span></div>";
 		echo "</li>";
-		echo '<div class="clearer"></div>';
 }
 ?>
         </ul>
     </div>
+    <a href="https://github.com/josephquigley/GitHub-User-Public-Feed-Widget">Get your own widget!</a>
     
 </div>
